@@ -20,7 +20,7 @@
 # include <stdio.h>
 # include <limits.h>
 
-// -- core.c --- 
+// --- ft_printf.c --- 
 int	ft_printf(const char *str, ...);
 int	ft_print(char c, char *str);
 int	ft_putnbr(const char *c, int base, size_t nbr);

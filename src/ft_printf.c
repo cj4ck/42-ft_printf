@@ -15,7 +15,7 @@
 static int	format_check(va_list args, const char format_specifier)
 {
 	if (format_specifier == 'c')
-		return ((ft_print(va_arg(args, int), "420vibes")));
+		return ((ft_print(va_arg(args, int), "This string will be ignored")));
 	else if (format_specifier == 's')
 		return (ft_print(1, va_arg(args, char *)));
 	else if (format_specifier == 'd' || format_specifier == 'i')
@@ -87,19 +87,19 @@ int	ft_putnbr(const char *c, int base, size_t nbr)
 	{
 		if (temp < 0)
 		{				
-			i += ft_print('-', "ignore");
+			i += ft_print('-', "This string will be ignored");
 			nbr *= -1;
 		}
 	}
 	if (nbr == 0)
-		i += ft_print('0', "ignore");
+		i += ft_print('0', "This sting will be ignored");
 	if (nbr >= (unsigned long int)base)
 	{
 		i += ft_putnbr(c, base, nbr / base);
 		i += ft_putnbr(c, base, nbr % base);
 	}
 	if (nbr < (unsigned long int)base && nbr != 0)
-		i += ft_print(c[nbr + 1], "ignore");
+		i += ft_print(c[nbr + 1], "This string will be ignored");
 	return (i);
 }
 
